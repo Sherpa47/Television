@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Ace Stream</title>
+
+
+<style type="text/css">
+
+body {
+  width: 100%;
+  margin:0 auto;
+  background-color: #000000}
+  
+  
+.define {
+            width: 100%;
+            margin:0 auto;
+            background: #000000;
+
+        }
+  
+  .aviso {
+            width: 85%;
+            margin:0 auto;
+            background: #000000;
+    
+        }
+  
+  
+h1 {
+  color: red;
+  font-family: verdana;
+  font-size: 90%;
+  padding: 15px 15px 0px 15px;
+}
+  
+ p {
+  color: white;
+  font-family: verdana;
+  font-size: 90%;
+  padding: 0px 15px 15px 15px;
+   
+}
+
+</style>
+
+
+<script src="//static.acestream.net/jsapi/acestream.min.js"></script>
+
+
+<script type="text/javascript">
+
+function init() {
+    var player = null;
+                    AceStream.createPlayer("#player", {
+                        onLoad: function (playerObj) {
+                            player = playerObj;
+                            // Sintel
+                            player.loadContentId("5789ca155323664edd293b848606688edf803f4d");
+                        },
+                        onError: function(err) {
+                            console.log("init: error: " + err);
+                        }
+                    });
+                
+}
+</script>
+
+</head>
+
+<body>
+  <div class='define'>
+    <div id="player" style="background-color: #000; width: auto; height: auto; margin: 25% auto 0 auto;">
+      
+    </div>
+
+    <script type="text/javascript">
+    init();
+    </script>
+    
+<br>
+<br>   
+
+         <div class='aviso'>
+            <h1>⚠ IMPORTANTE</h1>
+            <p>Para que funcione esta opción es necesario tener instalada la aplicación Acestream Media, descarga disponible en nuestro canal de Telegram o Play Store.</p>
+         </div>
+</div>
+       
+</body>
+</html>
